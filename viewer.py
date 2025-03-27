@@ -12,7 +12,7 @@ from mujoco.viewer import launch
 # 
 # model = mujoco.MjModel.from_xml_path("myo_sim/arm/leftarmtest.xml") 
 
-model = mujoco.MjModel.from_xml_path("myo_sim/arm/lefthand.xml") 
+model = mujoco.MjModel.from_xml_path("myo_sim/arm/leftarm.xml") 
 
 data = mujoco.MjData(model)
 
