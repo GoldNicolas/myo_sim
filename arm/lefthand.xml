@@ -92,6 +92,13 @@
         <mesh file="../myo_sim/flippedmeshesblender/trapezoidL.stl" name="trapezoid"/>
         <mesh file="../myo_sim/flippedmeshesblender/hamateL.stl" name="hamate"/>
         <mesh file="../myo_sim/flippedmeshesblender/2mcL.stl" name="2mc"/>
+        <mesh file="../myo_sim/flippedmeshesblender/3mcL.stl" name="3mc"/>
+        <mesh file="../myo_sim/flippedmeshesblender/5mcL.stl" name="5mc"/>
+        
+        <mesh file="../myo_sim/flippedmeshesblender/4mcL.stl" name="4mc"/>
+        <mesh file="../myo_sim/flippedmeshesblender/4proxphL.stl" name="4proxph"/>        
+        <mesh file="../myo_sim/flippedmeshesblender/4midphL.stl" name="4midph"/>
+        <mesh file="../myo_sim/flippedmeshesblender/4distphL.stl" name="4distph"/>
 
         <!-- <mesh name="thorax" file="/home/frank/Desktop/arms and body/myo_sim/flipped_meshes/flipped_thorax.stl" scale="1 -1 1"/>
         <mesh name="clavicleLef" file="/home/frank/Desktop/arms and body/myo_sim/flipped_meshes/flipped_clavicle.stl" scale="1 -1 1"/>
@@ -401,9 +408,11 @@
                                                 <!-- MIDDLE FINGER -->
                                                 <body name="thirdmc" pos="0.000477 -0.039239 0.007377">
                                                     <geom name="3mcskin" class="myohand_coll_arm" size="0.010 0.028" euler="1.42 0.01 0" pos="0 0 0"/>
-                                                    <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
-                                                    <!-- <geom mesh="3mc" name="3mc" type="mesh"/> -->
+                                                    <geom mesh="3mc" name="3mc" type="mesh"/>
                                                     <geom name="3rdmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="0.0016 -0.0271 0.0001" euler="2.5794221 -1.44967048 2.90614774" class="wrap_arm"/>
+                                                    
+                                                    <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
+                                                    
                                                     <site name="ECRB-P4" pos="0.0045 0.0279 0.0011"/>
                                                     <site name="PL-P4" pos="0.0018 0.0083 -0.0024"/>
                                                     <site name="FDS4-P4" pos="-0.0091 0.0054 -0.0108"/>
@@ -501,7 +510,7 @@
                                                 <!-- RING FINGER -->
                                                 <body name="fourthmc" pos="-0.012046 -0.040519 0.003513">
                                                     <geom name="4mcskin" class="myohand_coll_arm" size="0.0095 0.026" euler="1.55 -.08 0" pos=".001 0.002 -.00"/>
-                                                    <!-- <geom mesh="4mc" name="4mc" type="mesh"/> -->
+                                                    <geom mesh="4mc" name="4mc" type="mesh"/>
                                                     <!-- <geom name="4thmcp_ellipsoid_wrap" pos="-0.00413111 -0.0311007 0.00480312" quat="0.562021 -0.225806 -0.785857 0.124787" class="wrap_arm" size="0.00604155"/> -->
                                                     <geom name="4thmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="-0.0003 -0.0254 -0.0003" euler="-2.97212118 -1.22173048 -2.46318317" class="wrap_arm"/>
                                                     <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
@@ -529,12 +538,12 @@
 
                                                     <body name="proxph4" pos="-0.00183 -0.023689 -0.000173">
                                                         <joint axis="0.900447 0 0.434966"  name="mcp4_flexion" pos="0 0 0" range="0 1.5708"/>
-                                                        <joint axis="-0.434966 0 0.900447" name="mcp4_abduction" pos="0 0 0" range="-0.261799 0.261799"/>
+                                                        <joint axis="0.434966 0 0.900447" name="mcp4_abduction" pos="0 0 0" range="-0.261799 0.261799"/>
                                                         <geom class="myohand_coll_arm" size="0.0085 0.018" pos="-.001 -0.0200 .0008" euler="1.57 -.08 0"/>
-                                                        <!-- <geom mesh="4proxph" name="4proxph" type="mesh"/> -->
+                                                        <geom mesh="4proxph" name="4proxph" type="mesh"/>
                                                         <inertial pos="0 0 0" mass="0.01" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                         <!-- <geom name="Fourthpm_wrap" pos="-0.0033 -0.0401 -0.0001" quat="0.35623 -0.660837 -0.527455 0.397727" class="wrap_arm" size="0.004 0.005" type="cylinder"/> -->
-                                                        <geom name="Fourthpm_wrap" type="cylinder" size="0.00400000 0.005" pos="-0.0033 -0.0401 -0.0001" euler="-3.02291026 -1.12311937 -1.27251956" class="wrap_arm"/>
+                                                        <geom name="Fourthpm_wrap" type="cylinder" size="0.00400000 0.005" pos="-0.0033 -0.0401 -0.0001" euler="-3.02291026 -1.12311937 1.27251956" class="wrap_arm"/>
                                                         <!-- <site name="FDS4-P6" pos="0.0019 -0.02 -0.0049"/>
                                                         <site name="FDS4-P7" pos="0.0011 -0.0331 -0.0063"/>
                                                         <site name="FDP4-P6" pos="0.0018 -0.0199 -0.004"/>
@@ -563,7 +572,7 @@
                                                         <body name="midph4" pos="-0.003528 -0.040255 0.001345">
                                                             <joint axis="0.921061 0 0.389418" name="pm4_flexion" pos="0 0 0" range="0 1.5708"/>
                                                             <geom class="myohand_coll_arm" size="0.0075 0.01" pos="-.00 -0.012 -.001" euler="1.58 -.08 0"/>
-                                                            <!-- <geom mesh="4midph" name="4midph" type="mesh"/> -->
+                                                            <geom mesh="4midph" name="4midph" type="mesh"/>
                                                             <geom name="Fourthmd_wrap" type="cylinder" size="0.00300000 0.005" pos="-0.0021 -0.0247 -0.0001" euler="-3.02971705 -1.10287355 -2.87211382" class="wrap_arm"/>
                                                             <inertial pos="0 0 0" mass="0.003" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                             <!-- <site name="FDS4-P8" pos="-0.0009 -0.0147 -0.0021"/>
@@ -585,7 +594,7 @@
                                                             <body name="distph4" pos="-0.002317 -0.024789 0.000563">
                                                                 <joint axis="0.825336 0 0.564642" name="md4_flexion" pos="0 0 0" range="0 1.5708"/>
                                                                 <geom class="myohand_coll_arm" size="0.0068 0.008" pos="0.00 -0.01 -.002" euler="1.6 -.1 0"/>
-                                                                <!-- <geom mesh="4distph" name="4distph" type="mesh"/> -->
+                                                                <geom mesh="4distph" name="4distph" type="mesh"/>
                                                                 <inertial pos="0 0 0" mass="0.002" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                                 <site name="FDP4-P10" pos="0.0002 -0.014 -0.0022"/>
                                                                 <site name="EDC4-P9" pos="-0.001 -0.008 0.003"/>
@@ -599,7 +608,7 @@
                                                 <!-- Little Finger -->
                                                 <body name="fifthmc" pos="-0.021896 -0.034683 -0.004218">
                                                     <geom name="5mcskin" class="myohand_coll_arm" size="0.0095 0.024" euler="1.6 -.13 0" pos=".001 0.002 -.001"/>
-                                                    <!-- <geom mesh="5mc" name="5mc" type="mesh"/> -->
+                                                    <geom mesh="5mc" name="5mc" type="mesh"/>
                                                     <!-- <geom name="5thmcp_ellipsoid_wrap" pos="0.00188166 -0.0190329 -0.0064628" quat="0.442485 -0.205619 -0.870066 -0.070096" class="wrap_arm" size="0.00833444"/> -->
                                                     <geom name="5thmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="-0.0004 -0.0218 -0.0037" euler="-2.67175002 -0.83479098 -2.4659757" class="wrap_arm"/>
                                                     <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
