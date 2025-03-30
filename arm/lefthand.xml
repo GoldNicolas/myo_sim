@@ -91,10 +91,23 @@
         <mesh file="../myo_sim/flippedmeshesblender/thumbdistL.stl" name="thumbdist"/>
         <mesh file="../myo_sim/flippedmeshesblender/trapezoidL.stl" name="trapezoid"/>
         <mesh file="../myo_sim/flippedmeshesblender/hamateL.stl" name="hamate"/>
+
         <mesh file="../myo_sim/flippedmeshesblender/2mcL.stl" name="2mc"/>
+        <mesh file="../myo_sim/flippedmeshesblender/2proxphL.stl" name="2proxph"/>        
+        <mesh file="../myo_sim/flippedmeshesblender/2midphL.stl" name="2midph"/>
+        <mesh file="../myo_sim/flippedmeshesblender/2distphL.stl" name="2distph"/>
+
         <mesh file="../myo_sim/flippedmeshesblender/3mcL.stl" name="3mc"/>
+        <mesh file="../myo_sim/flippedmeshesblender/3proxphL.stl" name="3proxph"/>        
+        <mesh file="../myo_sim/flippedmeshesblender/3midphL.stl" name="3midph"/>
+        <mesh file="../myo_sim/flippedmeshesblender/3distphL.stl" name="3distph"/>
+
+
         <mesh file="../myo_sim/flippedmeshesblender/5mcL.stl" name="5mc"/>
-        
+        <mesh file="../myo_sim/flippedmeshesblender/5distphL.stl" name="5distph"/>
+        <mesh file="../myo_sim/flippedmeshesblender/5proxphL.stl" name="5proxph"/>        
+        <mesh file="../myo_sim/flippedmeshesblender/5midphL.stl" name="5midph"/>
+
         <mesh file="../myo_sim/flippedmeshesblender/4mcL.stl" name="4mc"/>
         <mesh file="../myo_sim/flippedmeshesblender/4proxphL.stl" name="4proxph"/>        
         <mesh file="../myo_sim/flippedmeshesblender/4midphL.stl" name="4midph"/>
@@ -284,9 +297,9 @@
                                                     <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                 </body>
                                                 <body name="secondmc" pos="0.014685 -0.03762 0.005032">
-                                                    <geom name="2mcskin" class="myohand_coll_arm" size="0.010 0.028" euler="1.42 0.15 -.1"/>
+                                                    <geom name="2mcskin" class="myohand_coll_arm" size="0.010 0.028" euler="1.42 0.15 -0.1"/>
                                                     <geom mesh="2mc" name="2mc" type="mesh"/>
-                                                    <geom name="2ndmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="0.0058 -0.0294 0.0007" euler="0.84927721 -1.33552594 1.33814394" class="wrap_arm"/>
+                                                    <geom name="2ndmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="0.0058 -0.0294 0.0007" euler="0.84927721 -1.33552594 -1.33814394" class="wrap_arm"/>
                                                     <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                     <!-- <site name="ECRL-P4" pos="0.0025 0.0164 0.0008"/>
                                                     <site name="FCR-P3" pos="-0.0034 0.0192 -0.0092"/>
@@ -610,7 +623,7 @@
                                                     <geom name="5mcskin" class="myohand_coll_arm" size="0.0095 0.024" euler="1.6 -.13 0" pos=".001 0.002 -.001"/>
                                                     <geom mesh="5mc" name="5mc" type="mesh"/>
                                                     <!-- <geom name="5thmcp_ellipsoid_wrap" pos="0.00188166 -0.0190329 -0.0064628" quat="0.442485 -0.205619 -0.870066 -0.070096" class="wrap_arm" size="0.00833444"/> -->
-                                                    <geom name="5thmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="-0.0004 -0.0218 -0.0037" euler="-2.67175002 -0.83479098 -2.4659757" class="wrap_arm"/>
+                                                    <geom name="5thmcp_ellipsoid_wrap" type="cylinder" size="0.0065 0.005" pos="-0.0004 -0.0218 -0.0037" euler="-2.67175002 3.14179098 -2.4659757" class="wrap_arm"/>
                                                     <inertial pos="0 0 0" mass="0.02" fullinertia="0.0001 0.0001 0.0001 0 0 0"/>
                                                     <site name="ECU-P6" pos="-0.0006 0.0207 0.0029"/>
                                                     <site name="FCU-P5" pos="0.0015 0.017 -0.0033"/>
